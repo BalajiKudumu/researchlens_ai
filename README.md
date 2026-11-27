@@ -325,6 +325,17 @@ Indian Institute of Technology (IIT) Patna
 
 ---
 
-## 📜 License
 
-This project is developed for academic and research purposes. Add an appropriate open-source license if you intend to distribute the source code publicly.
+## ⚖️ License and Commercial Use
+
+This project is intended for academic, educational, and research purposes.
+
+**Commercial Use and Prior Approval:**
+
+Any individual, organization, or company intending to use this project, its source code, architecture, methodology, or any part of its implementation for commercial purposes, including but not limited to generating revenue, offering paid services, integrating it into commercial products, or any other money-making activities, must obtain **prior written approval from the author**.
+
+Commercial use, redistribution, modification, or incorporation into a revenue-generating product or service without the author's explicit written permission is not permitted.
+
+For commercial licensing, partnerships, or other business-related inquiries, please contact the author to request authorization.
+
+**Author:** Balaji Kudumu
