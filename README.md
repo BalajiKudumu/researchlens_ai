@@ -1,97 +1,330 @@
-# ResearchLens AI — Hybrid GraphRAG + Multi-Agent Research Assistant
+# 🔬 ResearchLens AI
+## Hybrid GraphRAG and Multi-Agent AI for Scientific Research and Research Gap Discovery
 
-A Streamlit starter implementation for an M.Tech research project on scientific literature analysis and research-gap discovery.
+ResearchLens AI is an AI-powered scientific research assistant designed to help researchers analyze academic papers, retrieve relevant information, understand relationships between research concepts, and identify potential research gaps.
 
-## Features
-- Multi-PDF upload and text extraction using PyMuPDF
-- Complementary table extraction using pdfplumber
-- Chunking, Sentence Transformer embeddings and persistent ChromaDB
-- LLM-assisted metadata extraction (Gemini)
-- NetworkX knowledge graph for papers, authors, methods, datasets, keywords and findings
-- Vector RAG baseline and hybrid semantic + lexical + graph retrieval
-- Five sequential research agents: analyzer, literature review, methodology comparison, gap discovery and evidence audit
-- Markdown research report export
+The application combines **Vector Retrieval-Augmented Generation (Vector RAG), Knowledge Graphs, Hybrid GraphRAG, and Multi-Agent AI** to provide a structured approach to scientific literature analysis and research discovery.
 
-## Setup (Windows PowerShell)
+---
 
-```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-Copy-Item .env.example .env
-```
+## 📌 Project Overview
 
-Add your Gemini key to `.env` or enter it in the app sidebar.
+Scientific research often involves reviewing large volumes of academic literature, identifying relationships between research contributions, understanding existing limitations, and discovering unexplored research opportunities.
 
-Run:
+Traditional literature review methods can be time-consuming and may not effectively capture relationships between concepts across multiple research papers.
 
-```powershell
-streamlit run app.py
-```
+ResearchLens AI addresses these challenges through a hybrid retrieval and multi-agent architecture that integrates semantic search, graph-based knowledge representation, and collaborative AI analysis.
 
-## Project structure
+### Key Objectives
+
+- Automate the ingestion and processing of scientific research papers.
+- Extract meaningful information from academic PDF documents.
+- Enable semantic retrieval using vector embeddings.
+- Represent relationships between research concepts through knowledge graphs.
+- Combine vector-based and graph-based retrieval for contextual research analysis.
+- Use multiple AI agents to investigate research topics from different perspectives.
+- Identify potential research gaps and suggest future research directions.
+- Generate structured research reports with supporting references.
+
+---
+
+## ✨ Key Features
+
+### 1. Research Paper Upload and Processing
+- Upload academic research papers in PDF format.
+- Extract document text using PyMuPDF.
+- Split documents into manageable text chunks.
+- Generate semantic embeddings for document retrieval.
+- Store processed document information for subsequent analysis.
+
+### 2. Vector RAG
+- Semantic search across uploaded research papers.
+- Retrieve relevant document chunks based on user queries.
+- Generate context-aware responses using retrieved information.
+
+### 3. Knowledge Graph Construction
+- Identify important research concepts and entities.
+- Represent relationships between concepts.
+- Build a graph-based representation of scientific literature.
+- Explore connections between research topics and findings.
+
+### 4. Hybrid GraphRAG
+- Combine vector-based semantic retrieval with knowledge graph retrieval.
+- Retrieve relevant information from both document chunks and graph relationships.
+- Improve contextual understanding of research questions.
+- Support relationship-aware scientific literature analysis.
+
+### 5. Multi-Agent AI Research Workflow
+The multi-agent research workflow coordinates AI-driven analysis to investigate research topics.
+
+The workflow is designed to support tasks such as:
+
+- Research topic analysis.
+- Scientific literature investigation.
+- Methodology comparison.
+- Identification of limitations.
+- Research gap discovery.
+- Future research direction generation.
+- Structured research report preparation.
+
+### 6. Research Question Answering
+- Ask questions about uploaded scientific papers.
+- Retrieve relevant evidence from the indexed literature.
+- Generate contextual answers.
+- Support literature-based research investigation.
+
+### 7. Research Evaluation
+The application includes an evaluation module for assessing retrieval and answer-generation performance.
+
+Evaluation metrics include:
+
+| Category | Evaluation Metrics |
+|---|---|
+| Retrieval Performance | Precision@K, Recall@K, MRR, nDCG@K |
+| Answer Quality | Answer Correctness, Completeness, Faithfulness |
+| Evidence Quality | Citation Validity, Evidence Support |
+| Text Similarity | Exact Match, Token F1 |
+| Performance | Response Latency, Token Consumption |
+
+---
+
+## 🏗️ System Architecture
+
+The ResearchLens AI architecture consists of the following major components:
+
+1. **User Interface:** Streamlit-based interface for document uploads, research queries, graph exploration, and evaluation.
+2. **Document Ingestion:** Extracts and processes academic research papers.
+3. **Embedding and Vector Storage:** Generates semantic embeddings and stores document chunks using ChromaDB.
+4. **Knowledge Graph:** Represents entities and relationships extracted from scientific literature.
+5. **Hybrid Retrieval:** Combines semantic vector retrieval and graph-based retrieval.
+6. **Multi-Agent Research Team:** Coordinates AI agents to perform research analysis and research gap discovery.
+7. **Report Generation:** Produces structured research findings and reports.
+8. **Evaluation Module:** Measures retrieval quality, answer quality, evidence support, and response performance.
+
+### Research Workflow
 
 ```text
-hybrid_graphrag_research/
+             Research Paper Upload
+                      |
+                      v
+             PDF Text Extraction
+                      |
+                      v
+              Text Chunking
+                      |
+                      v
+             Embedding Generation
+                      |
+             +--------+--------+
+             |                 |
+             v                 v
+       Vector Database    Knowledge Graph
+          (ChromaDB)       (Relationships)
+             |                 |
+             +--------+--------+
+                      |
+                      v
+               Hybrid Retrieval
+                      |
+                      v
+                Research Query
+                      |
+                      v
+              Multi-Agent AI
+                 Workflow
+                      |
+          +-----------+-----------+
+          |           |           |
+          v           v           v
+       Research    Gap Analysis  Future
+       Analysis                  Directions
+          |           |           |
+          +-----------+-----------+
+                      |
+                      v
+             Research Report
+                      |
+                      v
+                Evaluation
+```
+
+---
+
+## 🛠️ Technology Stack
+
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| Frontend / User Interface | Streamlit |
+| Large Language Model | Google Gemini |
+| Embedding Model | all-MiniLM-L6-v2 |
+| Vector Database | ChromaDB |
+| PDF Processing | PyMuPDF |
+| Retrieval Architecture | Vector RAG and Hybrid GraphRAG |
+| AI Architecture | Multi-Agent AI |
+| Evaluation | Custom retrieval and answer evaluation metrics |
+
+---
+
+## 📂 Project Structure
+
+```text
+Hybrid_GraphRAG_Research/
+│
 ├── app.py
+│
 ├── src/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── ingestion.py
 │   ├── store.py
 │   ├── graph.py
 │   ├── retrieval.py
 │   ├── agents.py
-│   └── reporting.py
-├── data/                 # created automatically
+│   ├── reporting.py
+│   └── evaluation.py
+│
+├── data/
+│   └── Uploaded research papers
+│
 ├── requirements.txt
-└── .env.example
+│
+├── README.md
+│
+└── .gitignore
 ```
 
-## Important research limitations and next steps
-1. The initial graph is built from LLM-extracted paper metadata. Validate extracted authors, methods, datasets and findings before treating the graph as ground truth.
-2. The starter keyword retriever uses token overlap and reciprocal-rank fusion. For a stronger baseline, add BM25 with a curated corpus and tune retrieval weights.
-3. PDF tables are extracted and stored in paper metadata, but are not yet independently indexed as table-aware chunks.
-4. Scanned PDFs need OCR (for example, Tesseract) before text chunking.
-5. The current agent workflow is sequential prompting, not yet a fully stateful LangGraph implementation. This makes the baseline easy to inspect and ablate.
-6. Citation verification currently checks whether agents cite retrieved evidence IDs. A proper verifier should also test entailment between each claim and cited passage, ideally with human adjudication.
-7. Research-gap discovery cannot guarantee novelty. Validate proposed gaps with systematic database searches and a human-reviewed literature matrix.
+*Note: The directory structure above represents the main application modules. Adjust it to match the final structure of your GitHub repository.*
 
-## Suggested experimental design
-Compare these configurations on the same held-out question set:
-- A: Vector RAG
-- B: Hybrid semantic + keyword retrieval
-- C: Hybrid GraphRAG
-- D: Hybrid GraphRAG + multi-agent synthesis + evidence audit
+---
 
-Measure:
-- Retrieval: Recall@K, MRR, nDCG@K
-- Answer quality: expert-rated correctness, completeness and relevance
-- Grounding: faithfulness, citation precision and citation recall
-- Efficiency: end-to-end latency, number of LLM calls and token cost
+## ⚙️ Installation and Setup
 
-Build a gold dataset with question, relevant paper IDs, relevant passage/page IDs and expert reference answer. Do not compare systems using only LLM self-scores.
+### Prerequisites
 
-## Citation format
-The app labels retrieved passages as `[E1]`, `[E2]`, etc. These labels refer to paper title and page shown in the evidence panel. For a dissertation, preserve stable paper IDs and page-level source information in exported reports.
+- Python 3.10 or later (use the version supported by your dependencies).
+- pip package manager.
+- Google Gemini API key.
+- Git.
 
-## Security
-Do not commit `.env`, API keys, research PDFs or the local `data/` directory to Git.
+### Step 1: Clone the Repository
 
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+```
 
-## Evaluation tab (expanded)
-Upload a benchmark CSV with columns:
-- `qid`: stable question ID
-- `question`: the exact same question sent to each system
-- `relevant_filenames`: exact indexed PDF filename(s), separated by semicolons
-- `reference_answer`: human-validated reference answer
+Navigate to the project directory:
 
-The app runs Vector RAG, Hybrid GraphRAG, and a two-step Multi-Agent GraphRAG answer (draft + evidence verifier). It calculates Recall@K, Precision@K, MRR, nDCG@K, reference-answer token F1, strict exact match, citation-ID validity, elapsed latency, and rough token estimates. Results are saved locally in `data/evaluation_results.sqlite3` and can be exported as CSV.
+```bash
+cd Hybrid_GraphRAG_Research
+```
 
-Correctness, faithfulness and citation-support ratings are provided as 1–5 human-review fields. Citation-ID validity is not the same as citation entailment; human review is needed to determine whether the cited passage actually supports the claim. Token estimates are character-based approximations, not exact Gemini usage metadata. Use a sufficiently large, human-annotated benchmark and repeat runs before drawing dissertation conclusions.
+### Step 2: Create a Virtual Environment
 
-## Evaluation workflow (updated)
+```bash
+python -m venv venv
+```
 
-The Evaluation tab now reads saved Research Q&A interactions from `data/research_qa_history.sqlite3`; it no longer requires a separate benchmark CSV upload. Each successful Q&A interaction is saved with its question, generated answer, retrieved evidence, PDF filenames and page numbers. In Evaluation, review/edit the draft reference answer and relevant PDF filenames, then tick **Approved for benchmark** and run the selected questions against Vector RAG, Hybrid GraphRAG and Multi-Agent GraphRAG.
+Activate the environment.
 
-Important: the earlier AI-generated answer is only a draft reference answer, not ground truth. Validate/correct it against the paper before approving. Retrieval relevance filenames should also be reviewed. Existing PDFs and ChromaDB index are reused; do not upload them again. Q&A interactions from an older version are not retroactively available unless they were saved by that version; new interactions are saved automatically.
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+
+```bash
+source venv/bin/activate
+```
+
+### Step 3: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Configure Gemini API Key
+
+Obtain a Google Gemini API key and configure it through the API key input available in the ResearchLens AI application.
+
+Keep API keys private. Do not commit API keys or other credentials to GitHub.
+
+### Step 5: Run the Application
+
+```bash
+streamlit run app.py
+```
+
+The application will start in your default browser.
+
+---
+
+## 🚀 How to Use ResearchLens AI
+
+1. Launch the Streamlit application.
+2. Configure your Gemini API key.
+3. Navigate to the **Upload Papers** section.
+4. Upload one or more scientific research papers in PDF format.
+5. Allow the application to process and index the documents.
+6. Explore the indexed papers in the Paper Library.
+7. Use Research Q&A to ask questions about the uploaded literature.
+8. Explore relationships between research concepts through the Knowledge Graph.
+9. Navigate to Research Agents and enter a research topic.
+10. Run the multi-agent research workflow to investigate the topic and identify potential research gaps.
+11. Review the generated research findings and reports.
+12. Use the Evaluation section to assess the system's performance.
+
+---
+
+## 📊 Research Methodology and Comparative Analysis
+
+The project explores three retrieval and reasoning approaches:
+
+| Approach | Description |
+|---|---|
+| Vector RAG | Retrieves relevant research information using semantic similarity. |
+| Hybrid GraphRAG | Combines semantic retrieval with graph-based relationships. |
+| Multi-Agent GraphRAG | Extends hybrid retrieval through coordinated AI-agent research and analysis. |
+
+The comparative evaluation focuses on retrieval performance, answer quality, evidence support, research analysis, and system efficiency.
+
+---
+
+## 🎯 Expected Outcomes
+
+- Efficient processing and analysis of scientific research papers.
+- Improved contextual retrieval through combined vector and graph-based approaches.
+- Better understanding of relationships between scientific concepts.
+- Structured multi-agent analysis of research topics.
+- Identification of potential research gaps based on available literature.
+- Generation of evidence-supported research reports.
+- Quantitative comparison of Vector RAG, Hybrid GraphRAG, and Multi-Agent GraphRAG.
+
+---
+
+## 🔬 Research Scope
+
+The project focuses on applying Hybrid GraphRAG and Multi-Agent AI to scientific literature analysis and research gap discovery.
+
+The system is intended to assist researchers and postgraduate students in literature exploration, methodology comparison, research problem identification, and future research planning.
+
+Research gap suggestions should be validated against a sufficiently broad collection of relevant academic publications before being treated as novel research contributions.
+
+---
+
+## 👨‍💻 Author
+
+**Balaji Kudumu**
+
+M.Tech – Artificial Intelligence and Data Science  
+Indian Institute of Technology (IIT) Patna
+
+**Project:** Hybrid GraphRAG and Multi-Agent AI for Scientific Research and Research Gap Discovery
+
+---
+
+## 📜 License
+
+This project is developed for academic and research purposes. Add an appropriate open-source license if you intend to distribute the source code publicly.
