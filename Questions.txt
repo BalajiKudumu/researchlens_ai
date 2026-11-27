@@ -1,0 +1,54 @@
+Level 1 – Basic paper understanding
+Question 1
+What is the main research problem addressed in this paper?
+
+Question 2
+
+What is Federated Learning, and why is it useful in distributed machine learning?
+
+Question 3
+
+What are the two types of heterogeneity discussed in this paper? Explain each with examples.
+
+
+Level 2 – Methodology understanding
+Question 4
+What is the FedAvg algorithm, and how does it work?
+
+Question 5
+What limitations of FedAvg motivated the authors to propose FedProx?
+
+Question 6
+Explain the FedProx algorithm step by step. How does the proximal term help address heterogeneous data?
+
+Question 7
+What is the mathematical objective function introduced in FedProx? Explain the role of the parameter μ.
+
+
+Level 3 – Experimental analysis
+Question 8
+What experimental settings and datasets did the authors use to evaluate FedProx?
+
+Question 9
+What improvements did FedProx demonstrate compared with FedAvg in highly heterogeneous settings?
+
+Question 10
+What conclusions do the authors draw from their experimental evaluation?
+
+
+Level 4 – Critical research analysis
+Question 11
+What limitations or unresolved challenges are discussed in this paper?
+
+Question 12
+Does this paper investigate privacy-preserving mechanisms such as differential privacy or secure multiparty computation? Explain what the authors say about privacy.
+
+Question 13
+What future research directions could be investigated based on the limitations and findings of this paper?
+
+For Questions 11 and 13, distinguish explicitly stated limitations and future directions from your AI's own suggestions.
+
+
+
+What are the limitations of existing Federated Learning optimization algorithms, particularly FedAvg and FedProx, in handling statistical heterogeneity (Non-IID data) and systems heterogeneity across distributed devices? How can advanced optimization techniques, adaptive proximal regularization, and multi-agent AI approaches improve convergence stability, model accuracy, communication efficiency, and robustness in heterogeneous federated networks?
+
