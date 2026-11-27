@@ -1,0 +1,256 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {},
+  "nodes": [
+    {
+      "kind": "paper",
+      "label": "FEDERATED OPTIMIZATION IN HETEROGENEOUS NETWORKS",
+      "id": "paper:5f37ffb2ecfc"
+    },
+    {
+      "kind": "author",
+      "label": "Tian Li",
+      "id": "author:tian li"
+    },
+    {
+      "kind": "author",
+      "label": "Anit Kumar Sahu",
+      "id": "author:anit kumar sahu"
+    },
+    {
+      "kind": "author",
+      "label": "Manzil Zaheer",
+      "id": "author:manzil zaheer"
+    },
+    {
+      "kind": "author",
+      "label": "Maziar Sanjabi",
+      "id": "author:maziar sanjabi"
+    },
+    {
+      "kind": "author",
+      "label": "Ameet Talwalkar",
+      "id": "author:ameet talwalkar"
+    },
+    {
+      "kind": "author",
+      "label": "Virginia Smith",
+      "id": "author:virginia smith"
+    },
+    {
+      "kind": "method",
+      "label": "FedProx",
+      "id": "method:fedprox"
+    },
+    {
+      "kind": "method",
+      "label": "Federated Averaging (FedAvg)",
+      "id": "method:federated averaging (fedavg)"
+    },
+    {
+      "kind": "method",
+      "label": "Stochastic Gradient Descent (SGD)",
+      "id": "method:stochastic gradient descent (sgd)"
+    },
+    {
+      "kind": "method",
+      "label": "Proximal term modification",
+      "id": "method:proximal term modification"
+    },
+    {
+      "kind": "dataset",
+      "label": "synthetic datasets",
+      "id": "dataset:synthetic datasets"
+    },
+    {
+      "kind": "dataset",
+      "label": "real-world federated datasets",
+      "id": "dataset:real-world federated datasets"
+    },
+    {
+      "kind": "keyword",
+      "label": "Federated Learning",
+      "id": "keyword:federated learning"
+    },
+    {
+      "kind": "keyword",
+      "label": "Federated Optimization",
+      "id": "keyword:federated optimization"
+    },
+    {
+      "kind": "keyword",
+      "label": "Systems Heterogeneity",
+      "id": "keyword:systems heterogeneity"
+    },
+    {
+      "kind": "keyword",
+      "label": "Statistical Heterogeneity",
+      "id": "keyword:statistical heterogeneity"
+    },
+    {
+      "kind": "keyword",
+      "label": "FedProx",
+      "id": "keyword:fedprox"
+    },
+    {
+      "kind": "keyword",
+      "label": "FedAvg",
+      "id": "keyword:fedavg"
+    },
+    {
+      "kind": "keyword",
+      "label": "Distributed Optimization",
+      "id": "keyword:distributed optimization"
+    },
+    {
+      "kind": "finding",
+      "label": "FedProx allows for more robust convergence than FedAvg across a suite of realistic federated datasets.",
+      "id": "finding:5f37ffb2ecfc:20"
+    },
+    {
+      "kind": "finding",
+      "label": "In highly heterogeneous settings, FedProx demonstrates significantly more stable and accurate convergence behavior relative to FedAvg.",
+      "id": "finding:5f37ffb2ecfc:21"
+    },
+    {
+      "kind": "finding",
+      "label": "FedProx improves absolute test accuracy by 22% on average in highly heterogeneous settings.",
+      "id": "finding:5f37ffb2ecfc:22"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "AUTHORED_BY",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "author:tian li",
+      "key": 0
+    },
+    {
+      "relation": "AUTHORED_BY",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "author:anit kumar sahu",
+      "key": 0
+    },
+    {
+      "relation": "AUTHORED_BY",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "author:manzil zaheer",
+      "key": 0
+    },
+    {
+      "relation": "AUTHORED_BY",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "author:maziar sanjabi",
+      "key": 0
+    },
+    {
+      "relation": "AUTHORED_BY",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "author:ameet talwalkar",
+      "key": 0
+    },
+    {
+      "relation": "AUTHORED_BY",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "author:virginia smith",
+      "key": 0
+    },
+    {
+      "relation": "USES_METHOD",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "method:fedprox",
+      "key": 0
+    },
+    {
+      "relation": "USES_METHOD",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "method:federated averaging (fedavg)",
+      "key": 0
+    },
+    {
+      "relation": "USES_METHOD",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "method:stochastic gradient descent (sgd)",
+      "key": 0
+    },
+    {
+      "relation": "USES_METHOD",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "method:proximal term modification",
+      "key": 0
+    },
+    {
+      "relation": "USES_DATASET",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "dataset:synthetic datasets",
+      "key": 0
+    },
+    {
+      "relation": "USES_DATASET",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "dataset:real-world federated datasets",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:federated learning",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:federated optimization",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:systems heterogeneity",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:statistical heterogeneity",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:fedprox",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:fedavg",
+      "key": 0
+    },
+    {
+      "relation": "TAGGED_WITH",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "keyword:distributed optimization",
+      "key": 0
+    },
+    {
+      "relation": "REPORTS_FINDING",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "finding:5f37ffb2ecfc:20",
+      "key": 0
+    },
+    {
+      "relation": "REPORTS_FINDING",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "finding:5f37ffb2ecfc:21",
+      "key": 0
+    },
+    {
+      "relation": "REPORTS_FINDING",
+      "source": "paper:5f37ffb2ecfc",
+      "target": "finding:5f37ffb2ecfc:22",
+      "key": 0
+    }
+  ]
+}
